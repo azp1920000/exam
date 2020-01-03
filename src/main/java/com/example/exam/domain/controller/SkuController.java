@@ -55,6 +55,8 @@ public class SkuController {
             skuParam.setEndTime(LocalDateTime.now());
         if (skuParam.getEndTime() != null)
             skuParam.setStartTime(LocalDateTime.parse("1950-01-01 00:00:00"));
+
+
         SkuDTO skuDTO = new SkuDTO();
         BeanUtils.copyProperties(skuParam,skuDTO);
         return skuService.getSkuInfo(skuDTO);

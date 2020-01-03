@@ -97,7 +97,7 @@ public interface SkuMapper {
             "#{id}",
             "</foreach>",
             "</if>",
-
+            "LIMIT #{skuDTO.pageNum},#{skuDTO.pageSize}",
             "</script>",
     })
     List<SkuDTO> getSkuInfo(@Param("skuDTO") SkuDTO skuDTO);

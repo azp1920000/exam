@@ -51,4 +51,9 @@ public class SkuDTO {
     @ApiModelProperty("结束时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime endTime;
+
+    @ApiModelProperty("页码数")
+    private Integer pageNum;
+    @ApiModelProperty("页面容量")
+    private Integer pageSize;
 }

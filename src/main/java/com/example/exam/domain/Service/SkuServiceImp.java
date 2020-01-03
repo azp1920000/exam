@@ -54,6 +54,7 @@ public class SkuServiceImp implements SkuService{
      */
     @Override
     public List<SkuDTO> getSkuInfo(SkuDTO skuDTO) {
+        skuDTO.setPageNum(skuDTO.getPageNum()*skuDTO.getPageSize());
         return skuMapper.getSkuInfo(skuDTO);
     }
 
